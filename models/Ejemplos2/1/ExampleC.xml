@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<feature-model>
+	<feature name="Debian">
+			<binaryRelation name="c1">
+			<cardinality max="1" min="1"/>
+			<solitaryFeature name="browser">
+				<setRelation name="c2">
+					<cardinality max="1" min="1"/>
+					<groupedFeature name="chrome"/>
+					<groupedFeature name="opera"/>
+					<groupedFeature name="explorer"/>
+				</setRelation>
+			</solitaryFeature>
+		</binaryRelation>
+	</feature>
+</feature-model>

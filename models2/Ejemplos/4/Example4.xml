@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><feature-model xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.tdg-seville.info/benavides/featuremodelling/feature-model.xsd">
+<feature name="Debian">
+	<binaryRelation name="c1">
+		<cardinality max="1" min="1"/>
+		<solitaryFeature name="texteditor"></solitaryFeature>
+	</binaryRelation>
+	<binaryRelation name="c2">
+		<cardinality max="1" min="1"/>
+		<solitaryFeature name="bash"> </solitaryFeature>
+	</binaryRelation>
+	<binaryRelation name="c3">
+		<cardinality max="1" min="0"/>
+		<solitaryFeature name="gui"></solitaryFeature>
+	</binaryRelation>
+	<binaryRelation name="c4">
+		<cardinality max="1" min="0"/>
+		<solitaryFeature name="games">
+			<setRelation name="c5">
+				<cardinality max="1" min="1"/>
+				<groupedFeature name="gnuchess"/>
+				<groupedFeature name="glchess"/>
+			</setRelation>
+		</solitaryFeature>
+	</binaryRelation>
+</feature>
+<excludes name="c6" excludes="games" feature="gui"/>
+</feature-model>

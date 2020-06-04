@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<feature-model xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.tdg-seville.info/benavides/featuremodelling/feature-model.xsd">
+    <feature name="Debian">
+   		<binaryRelation name="c1">
+			<cardinality min="1" max="1"/>
+			<solitaryFeature name="texteditor">
+				<setRelation name="c5">
+					<cardinality min="1" max="3"/>
+					<groupedFeature name="vi"/>
+					<groupedFeature name="gedit"/>
+					<groupedFeature name="openoffice.org-gtk-gnome">
+						<setRelation name="c8">
+							<cardinality min="1" max="1"/>
+							<groupedFeature name="openoffice.org-gnome 1:2.4.0-3 Ubuntu 6"/>
+							<groupedFeature name="openoffice.org2-gnome 1:2.4.0-3 Ubuntu 6"/>
+						</setRelation>				
+					</groupedFeature>
+			</setRelation>
+			</solitaryFeature>
+		</binaryRelation>
+		<binaryRelation name="c2">
+			<cardinality min="1" max="1"/>
+			<solitaryFeature name="bash"/>
+		</binaryRelation>
+		<binaryRelation name="c3">
+			<cardinality min="1" max="2"/>
+			<solitaryFeature name="gui">
+				<setRelation name="c6">
+					<cardinality min="1" max="2"/>
+					<groupedFeature name="gnome"/>
+					<groupedFeature name="kde"/>
+				</setRelation>
+			</solitaryFeature>
+		</binaryRelation>	
+		<binaryRelation name="c4">
+			<cardinality min="0" max="1"/>
+			<solitaryFeature name="games">
+				<setRelation name="c7">
+					<cardinality min="1" max="2"/>
+					<groupedFeature name="gnuchess"/>
+					<groupedFeature name="glchess"/>
+				</setRelation>
+			</solitaryFeature>
+		</binaryRelation>
+		<binaryRelation name="c10">
+			<cardinality min="1" max="1"/>
+			<solitaryFeature name="browser">
+				<setRelation name="c12">
+					<cardinality min="1" max="3"/>
+					<groupedFeature name="opera"/>
+					<groupedFeature name="chrome"/>
+					<groupedFeature name="mozilla"/>
+				</setRelation>
+			</solitaryFeature>
+		</binaryRelation>			
+		<binaryRelation name="c11">
+			<cardinality min="0" max="1"/>
+			<solitaryFeature name="chat"/>
+		</binaryRelation>
+    </feature>
+    <requires name="c9" feature="openoffice.org-gtk-gnome" requires="gnome"/>
+</feature-model>
