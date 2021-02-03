@@ -12,4 +12,4 @@ Also, the following scripts are provided to execute BOLON.jar on a set of models
 
 Finally, also provide:
  * A set of models with a fixed set of conflict sets. 
- * The results shown in the associated paper. 
+ * The test suite files for the results in the associated paper. 
